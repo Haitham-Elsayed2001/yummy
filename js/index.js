@@ -281,8 +281,8 @@ function displayMealDetails(meal) {
                     ${tagsStr}
                 </ul>
 
-                <a target="_blank" href="${meal.strSource}" class="btn btn-success">Source</a>
-                <a target="_blank" href="${meal.strYoutube}" class="btn btn-danger">Youtube</a>
+                <a target="_blank" href="${meal.strSource}" class="btn btn-warning">Source</a>
+                <a target="_blank" href="${meal.strYoutube}" class="btn btn-info">Youtube</a>
             </div>`
 
     rowData.innerHTML = cartoona
@@ -372,7 +372,7 @@ function showContacts() {
                 </div>
             </div>
         </div>
-        <button id="submitBtn" disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
+        <button id="submitBtn" disabled class="btn btn-outline-success px-2 mt-3">Submit</button>
     </div>
 </div> `
     submitBtn = document.getElementById("submitBtn")
