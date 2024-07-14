@@ -319,14 +319,14 @@ async function searchByName(term) {
 async function searchByFLetter(term) {
     closeSideNav()
     rowData.innerHTML = ""
-    $(".inner-loading-screen").fadeIn(300)
+    $(".inner-loading-screen").fadeIn(400)
 
     term == "" ? term = "a" : "";
     let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${term}`)
     response = await response.json()
 
     response.meals ? displayMeals(response.meals) : displayMeals([])
-    $(".inner-loading-screen").fadeOut(300)
+    $(".inner-loading-screen").fadeOut(400)
 
 }
 
@@ -334,7 +334,7 @@ async function searchByFLetter(term) {
 function showContacts() {
     rowData.innerHTML = `<div class="contact min-vh-100 d-flex justify-content-center align-items-center">
     <div class="container w-75 text-center">
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-md-6">
                 <input id="nameInput" onkeyup="inputsValidation()" type="text" class="form-control" placeholder="Enter Your Name">
                 <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
